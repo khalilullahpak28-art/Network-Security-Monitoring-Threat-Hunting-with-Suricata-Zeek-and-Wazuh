@@ -1,0 +1,20 @@
+<!--
+  Wazuh Agent (host-kali) localfile configuration snippet
+  Project: Network Security Monitoring & Threat Hunting
+  Location: inserted into /var/ossec/etc/ossec.conf on Kali,
+  just before the closing </ossec_config> tag.
+
+  NOTE: Adjust the Zeek path to match the actual user's home directory
+  (e.g. /home/<user>/zeek-logs/conn.log) -- using /root/... here will
+  silently fail to match if Zeek was run as a non-root user's session.
+-->
+
+<localfile>
+  <log_format>json</log_format>
+  <location>/home/khalil/zeek-logs/conn.log</location>
+</localfile>
+
+<localfile>
+  <log_format>json</log_format>
+  <location>/var/log/suricata/eve.json</location>
+</localfile>
