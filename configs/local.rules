@@ -1,0 +1,6 @@
+# Custom Suricata rule - validation test
+# Project: Network Security Monitoring & Threat Hunting
+# Location on Kali: /var/lib/suricata/rules/local.rules
+# Referenced in /etc/suricata/suricata.yaml under rule-files:
+
+alert icmp 192.168.56.102 any -> 192.168.56.1 any (msg:"TEST: Ping from Windows10 VM detected"; sid:1000001; rev:1;)
